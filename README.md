@@ -1,11 +1,11 @@
 # Introduction to C/C++ history & Data types in C++ 
 
-## **Introduction**
+## **1. Introduction**
 The journey from **assembly language** to modern high-level languages like **C** and **C++** marked a revolutionary shift in programming. This evolution enabled developers to write more complex, readable, and portable code, contributing to the rapid growth of software development. This document explores the key milestones that transformed low-level programming into a more accessible and efficient process.
 
 ---
 
-## **1. Assembly Language: The Beginning**
+### **1.1 Assembly Language: The Beginning**
 - **Overview:**  
   - Introduced in the 1940s and 1950s as a **low-level language** closely tied to machine instructions.  
   - Programs were written with **mnemonics** (e.g., `MOV`, `ADD`) that correspond directly to CPU instructions.  
@@ -22,7 +22,7 @@ The journey from **assembly language** to modern high-level languages like **C**
 
 ---
 
-## **2. The Rise of C: A Paradigm Shift (1972)**
+### **1.2 The Rise of C: A Paradigm Shift (1972)**
 - **Overview:**  
   - **C** was developed by **Dennis Ritchie** at Bell Labs as a high-level alternative to assembly, originally to rewrite the **UNIX** operating system.  
   - It introduced **structured programming** with loops, conditionals, and functions, making code more modular and readable.  
@@ -38,7 +38,7 @@ The journey from **assembly language** to modern high-level languages like **C**
 
 ---
 
-## **3. The Birth of C++: Object-Oriented Programming (1985)**
+### **1.3 The Birth of C++: Object-Oriented Programming (1985)**
 - **Overview:**  
   - **C++** was created by **Bjarne Stroustrup** as an extension of C to support **object-oriented programming (OOP)** concepts.  
   - It combined the power of C with new paradigms like **encapsulation, inheritance, and polymorphism.**
@@ -54,7 +54,7 @@ The journey from **assembly language** to modern high-level languages like **C**
 
 ---
 
-## **4. Why C and C++ Remain Relevant Today**
+### **1.4 Why C and C++ Remain Relevant Today**
 - **C**  
   - Used in system-level programming, embedded systems, and the development of operating systems like **Linux**.  
   - Known for its **efficiency** and **close-to-hardware control**.
@@ -65,7 +65,7 @@ The journey from **assembly language** to modern high-level languages like **C**
 
 ---
 
-## **5. Assembly, C, and C++: A Comparison**
+### **1.5 Assembly, C, and C++: A Comparison**
 
 | Feature               | Assembly Language          | C                       | C++                        |
 |-----------------------|----------------------------|-------------------------|----------------------------|
@@ -75,31 +75,30 @@ The journey from **assembly language** to modern high-level languages like **C**
 | Programming Paradigm  | Imperative                 | Imperative              | Object-Oriented + Generic |
 | Use Cases             | Embedded Systems, Drivers | OS Development, Firmware| Game Engines, Finance      |
 
----
----
-## **6.Problem Solving in C++**
-### **Why Use C++ for Problem Solving?**
-C++ offers the **speed of low-level programming** with the convenience of high-level features. It is one of the most widely used languages in **competitive programming**, known for its **efficiency, STL**, and **flexibility**.
+-----------------------
+## **2. Problem Solving in C++**
+  ### **2.1 Why Use C++ for Problem Solving?**
+  C++ offers the **speed of low-level programming** with the convenience of high-level features. It is one of the most widely used languages in **competitive programming**, known for its **efficiency, STL**, and **flexibility**.
 
-### **Key Aspects of Problem Solving in C++**
-1. **Time and Space Efficiency**  
-   - C++ is designed for **performance**, making it ideal for solving time-sensitive problems.  
-   - Fine control over memory with **dynamic allocation** (via `new` and `delete`).
+  ### **2.2 Key Aspects of Problem Solving in C++**
+  1. **Time and Space Efficiency**  
+     - C++ is designed for **performance**, making it ideal for solving time-sensitive problems.  
+     - Fine control over memory with **dynamic allocation** (via `new` and `delete`).
 
-2. **STL for Rapid Prototyping**  
-   - Use STL containers such as **vectors** and **maps** to quickly model data.  
-   - Algorithms like `std::sort()` or `std::binary_search()` provide efficient solutions with minimal code.
-    ----
+  2. **STL for Rapid Prototyping**  
+     - Use STL containers such as **vectors** and **maps** to quickly model data.  
+     - Algorithms like `std::sort()` or `std::binary_search()` provide efficient solutions with minimal code.
+   
    
 
- ### **Steps to Solve Problems Systematically**
+ ### **2.3 Steps to Solve Problems Systematically**
 1. **Understand the Problem Statement**  
 2. **Read Carefully:** Understand the inputs, outputs, and constraints.  
 3. **Clarify Questions:** If anything is ambiguous, think through edge cases or re-read the prompt.  
 4. **Identify Key Information:** Extract important details like input size, limits, or required operations.  
 5. **Write Down a Rough Outline or Pseudocode:** Visualize the steps clearly before implementing the code.
 
-   ### **Optimizing Solutions: Efficient Memory and Computing**
+### **2.4 Optimizing Solutions: Efficient Memory and Computing**
 
 After understanding the problem and drafting a basic solution, the next step is to **find the most optimal solution** by focusing on two key aspects:  
 1. **Efficient Memory Usage** (using the right data structures)  
@@ -107,21 +106,56 @@ After understanding the problem and drafting a basic solution, the next step is 
 
   
    ![Screenshot 2024-10-19 171633](https://github.com/user-attachments/assets/7fa9e226-42d3-4d93-9f19-5cb05da16085)
+-----------------
+# **Hello World**
+![hello](https://github.com/user-attachments/assets/d4e5aecd-ddba-4a1b-9a61-af0f0a372e1c)
+```cpp
+#include<iostream>
+using namespace std;
 
-   ## **7.Variables and Data Types in C++**
+int main(){
+    cout << "Hello World!" << endl ;
+
+    return 0 ;
+}
+```
+
+
+## **3.C++ libraries, Data types and operators** 
+
+   ### **3.1 `iostream` Library and Namespace** 
+The `iostream` library in C++ is essential for input and output operations. It provides functionalities to read from standard input (keyboard) and write to standard output (screen). The primary objects defined in this library are `cin`, `cout`, `cerr`, and `clog`.
+
+#### Key Components
+
+- **`cin`**: Standard input stream, used to take input from the user.
+- **`cout`**: Standard output stream, used to display output to the user.
+- **`cerr`**: Standard error stream, used to display error messages. It does not buffer output, meaning it displays output immediately.
+- **`clog`**: Standard logging stream, used for logging messages. It is buffered and can be used for diagnostic messages.
+  
+### **3.2 `using namespace std;`**
+C++ uses namespaces to organize code and avoid name conflicts. The std namespace contains all the standard library functions and objects, including those in the iostream library.
+When you include the line:
+
+`using namespace std;`
+You tell the compiler that you want to use everything in the std namespace. This allows you to use standard library functions and objects without the std:: prefix.
+
+
+
+   ## **4. Variables and Data Types in C++**
 
 In C++, variables and data types are fundamental concepts that allow you to store and manipulate data. This section covers **variable naming rules**, **constants**, **identifiers**, and the different data types available, including special focus on **char, boolean,** and **ASCII codes**.
 
 ---
 
-### **1. Variables Naming and Identifiers**
-- **Variables** are used to store data, and each variable must have a **name (identifier)**.
-- **Rules for Naming Variables:**
-  1. The name must begin with a **letter** (A-Z or a-z) or an **underscore** (_).
-  2. It can contain **letters, digits, or underscores** but no spaces.
-  3. **Keywords** (like `int`, `return`) cannot be used as variable names.
-  4. Variable names are **case-sensitive** (`MyVar` and `myvar` are different).
-  
+  ### **4.1 Variables Naming and Identifiers**
+  - **Variables** are used to store data, and each variable must have a **name (identifier)**.
+  - **Rules for Naming Variables:**
+    1. The name must begin with a **letter** (A-Z or a-z) or an **underscore** (_).
+    2. It can contain **letters, digits, or underscores** but no spaces.
+    3. **Keywords** (like `int`, `return`) cannot be used as variable names.
+    4. Variable names are **case-sensitive** (`MyVar` and `myvar` are different).
+    
 - **Example:**
   ```cpp
   int myAge = 25;   // Valid
@@ -129,9 +163,7 @@ In C++, variables and data types are fundamental concepts that allow you to stor
   int 2cool = 10;   // Invalid: Cannot start with a digit
   ```
 
-
-
-  ### **2. Constants in C++**
+  ### **4.2 Constants in C++**
 Constants are variables whose values **cannot be changed** once initialized.
 
 Declared using the **`const` keyword** or the **`#define` directive**.
@@ -145,7 +177,7 @@ const float PI = 3.14159;  // Constant variable
 ```cpp
 #define MAX_SIZE 100  // Preprocessor constant
 ```
-### **3.Data Types and Sizes in C++**
+### **4.3 Data Types and Sizes in C++**
 
 C++ supports multiple data types, which vary in size and purpose. Below are some of the most common ones:
 
@@ -178,7 +210,7 @@ C++ supports multiple data types, which vary in size and purpose. Below are some
 - **`unsigned int`**: Only stores non-negative integers.
 
   -----
-  ### 4.Special Characters in C++
+  ### 4.4 Special Characters in C++
 
 In C++, special characters can be represented using escape sequences. Below are some of the most common ones:
 
@@ -193,7 +225,7 @@ In C++, special characters can be represented using escape sequences. Below are 
 
 
 ------
-### 5.Comments
+### 4.5 Comments
 ```cpp
 // this is a single line comment
 
@@ -205,7 +237,7 @@ comment
 */
 ```
 -----
-### 6.Operators in C++
+### 4.6 Operators in C++
 #### Arithmetic Operators
 
 In C++, arithmetic operators are used to perform basic mathematical operations. The common arithmetic operators are:
@@ -303,7 +335,7 @@ Logical operators in C++ are used to combine or invert boolean expressions. They
 
 The ASCII code is a number that represents a charachter in computer:
 
-### Example of ASCII Values
+##### Example of ASCII Values
 
 Here are a few examples of ASCII values:
 
@@ -314,11 +346,11 @@ Here are a few examples of ASCII values:
 | `0`           | 48               |
 
 
-#### Using ASCII in C++
+##### Using ASCII in C++
 
 In C++, you can use ASCII values to manipulate characters. Below is an example of how to print ASCII values of characters and convert characters to their corresponding ASCII values.
 
-### Example Code
+##### Example Code
 
 ```cpp
 #include <iostream>
@@ -342,13 +374,14 @@ int main() {
     return 0;
 }
 ```
-### 7.Input and Output in C++
+## **5. Input and Output in C++**
+### **5.1 `cin` & `cout`
 
 In C++, input and output operations are primarily handled using the `cin` and `cout` objects, which are part of the `<iostream>` header.
 The `cout` object is used to output data to the standard output (usually the console). The insertion operator (`<<`) is used to send data to `cout`.
 The `cin` object is used to read data from the standard input (usually the keyboard). The extraction operator (`>>`) is used to get data from `cin`.
 
- #### **More in I/O in c++
+ ### **5.2 More in I/O in c++**
  #### Fixed Notation
 
 By default, floating-point numbers may be displayed in scientific notation if they are very large or very small. Using `std::fixed` forces the output to be in fixed-point notation, which displays the number as a standard decimal number.
@@ -387,14 +420,21 @@ int main() {
 }
 ```
 
+## ** 6.Errors**
+**6.1 Syntax Errors**
+
+These are also referred to as compilation Error ,These errors have occurred when the rule of C++ writing techniques or syntax has been broken. These types of errors are typically flagged by the compiler prior to compilation.
 
 
+**6.2 Runtime Errors**
 
+This type of error occurs while the program is running. Because this is not a compilation error, the compilation will be completed successfully.
 
+**6.3 Logical Errors**
 
+Even if the syntax and other factors are correct, we may not get the desired results due to logical issues. These are referred to as logical errors.
 
-
-## **Refferences**
+## **7. Refferences**
 - C++ How to Program Paperback by Paul Deitel (Author), Harvey Deitel (Author)
 - [History of C Programming Language](https://en.wikipedia.org/wiki/C_(programming_language))  
 - [GeeksforGeeks C++](https://www.geeksforgeeks.org/c-plus-plus/)
